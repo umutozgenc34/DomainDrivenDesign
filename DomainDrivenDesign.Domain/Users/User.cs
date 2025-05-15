@@ -1,12 +1,54 @@
-﻿namespace DomainDrivenDesign.Domain.Users;
+﻿using DomainDrivenDesign.Domain.Abstractions;
+using DomainDrivenDesign.Domain.Shared;
 
-public sealed class User
+namespace DomainDrivenDesign.Domain.Users;
+
+public sealed class User : Entity
 {
-    public Guid Id { get; set; }
-    public string Name { get; set; }
-    public string Email { get; set; }
-    public string Password { get; set; }
-    public string Country { get; set; }
-    public string FullAdress { get; set; }
-    public string PostalCode { get; set; }
+    private User(Guid id,Name name, Email email, Password password, Address address) : base(id)
+    {
+        Name = name;
+        Email = email;
+        Password = password;
+        Address = address;
+    }
+
+    public Name Name { get; private set; }
+    public Email Email { get; private set; }
+    public Password Password { get; private set; }
+    public Address Address { get; private set; }
+
+    //factory
+    public static User CreateUser(string name, string email, string password, string country ,string postalCode, string fullAddress)
+    {
+        User user = new(
+            id: Guid.NewGuid(),
+            name: new(name),
+            email: new(email),
+            password: new(password),
+            address: new(country, fullAddress, postalCode));
+
+        return user;
+
+    }
+
+    public void ChangeName(string name)
+    {
+        Name = new(name);
+    }
+
+    public void ChangeEmail(string email)
+    {
+        Email = new(email);
+    }   
+
+    public void ChangeAdress(string country,string fullAdress,string postalCode)
+    {
+        Address = new Address(country, fullAdress, postalCode);
+    }
+    
+    public void ChangePassword(string password)
+    {
+        Password = new(password);
+    }
 }
