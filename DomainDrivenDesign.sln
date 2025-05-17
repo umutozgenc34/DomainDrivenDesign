@@ -5,7 +5,9 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainDrivenDesign.Domain", "DomainDrivenDesign.Domain\DomainDrivenDesign.Domain.csproj", "{39ABE871-204F-4054-BF35-4CE235C6FBFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainDrivenDesign.Application", "DomainDrivenDesign.Application\DomainDrivenDesign.Application.csproj", "{AC32A79E-735D-4804-AD8A-B7010BFC37D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainDrivenDesign.Application", "DomainDrivenDesign.Application\DomainDrivenDesign.Application.csproj", "{AC32A79E-735D-4804-AD8A-B7010BFC37D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainDrivenDesign.Infrastructure", "DomainDrivenDesign.Infrastructure\DomainDrivenDesign.Infrastructure.csproj", "{BD73F3EB-0149-4FC6-9C4A-1EFD3521517A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{AC32A79E-735D-4804-AD8A-B7010BFC37D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC32A79E-735D-4804-AD8A-B7010BFC37D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC32A79E-735D-4804-AD8A-B7010BFC37D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD73F3EB-0149-4FC6-9C4A-1EFD3521517A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD73F3EB-0149-4FC6-9C4A-1EFD3521517A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD73F3EB-0149-4FC6-9C4A-1EFD3521517A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD73F3EB-0149-4FC6-9C4A-1EFD3521517A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
