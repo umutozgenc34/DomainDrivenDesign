@@ -5,6 +5,10 @@ namespace DomainDrivenDesign.Domain.Orders;
 
 public sealed class Order : Entity //aggregate root
 {
+    private Order(Guid id) : base(id)
+    {
+
+    }
     public Order(Guid id, string orderNumber, DateTime createdDate, OrderStatusEnum status) : base(id)
     {
         OrderNumber = orderNumber;

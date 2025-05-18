@@ -17,8 +17,7 @@ public static class InfrastructureExtensions
     {
         services.AddDbContext<AppDbContext>(opt =>
         {
-            //TODO: connection stringi ver
-            opt.UseSqlServer(configuration.GetConnectionString(""));
+            opt.UseSqlServer(configuration.GetConnectionString("SqlServer"));
         });
 
         services.AddScoped<IUnitOfWork>(opt => opt.GetRequiredService<AppDbContext>()); // Register the DbContext as IUnitOfWork

@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using DomainDrivenDesign.Domain.Abstractions;
+using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
 namespace DomainDrivenDesign.Application.Extensions;
@@ -9,7 +10,8 @@ public static class ApplicationExtension
     {
         services.AddMediatR(conf =>
         {
-            conf.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
+            conf.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly(),
+                typeof(Entity).Assembly);
         });
         return services;
     }
